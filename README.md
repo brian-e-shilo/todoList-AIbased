@@ -30,4 +30,4 @@ Brief overview of the main folders and files.
 
 ___
 
-this is an adaptation of todolist-ai by s-alad
+This is an adaptation of todolist-ai by s-alad

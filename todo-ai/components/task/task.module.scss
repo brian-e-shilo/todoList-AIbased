@@ -1,0 +1,123 @@
+@use "../styles/common.scss" as c;
+
+.taskactions {
+    display: flex;
+    flex-direction: column;
+}
+
+.task {
+    min-height: 40px;
+    background-color: c.$paragraph;
+    border-radius: c.$small-corner;
+    width: 100%;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    textarea {
+        flex: 1;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0 16px;
+        resize: none;
+        color: white;
+    }
+
+    .config {
+        /* width: 80px; */
+        padding-right: 14px;
+        padding-left: 12px;
+        cursor: pointer;
+        height: 60%;
+        border-left: 2px solid c.$highlight;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+
+        .circle {
+            
+            @include c.center();
+            border-radius: 100%;
+            /* border: 1px solid white; */
+            width: 22px;
+            height: 22px;
+
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+              }
+
+            .loading {
+                border: 2px solid #f3f3f3; /* Light grey */
+                border-top: 2px solid c.$tertiary; /* Blue */
+                border-radius: 50%;
+                width: 17px;
+                height: 17px;
+                animation: spin 2s linear infinite;
+            }
+
+            .zap {
+                width: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+    
+            .delete {
+                color: black;
+                width: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            /* &:last-child {
+                margin-left: 4px;
+            } */
+        }
+    }
+
+}
+
+
+.actions {
+    
+    margin-bottom: 12px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+
+    .expand {
+        width: 36px;
+        padding-left: 18px;
+        @include c.center();
+        padding-top: 4px;
+        padding-bottom: 18px;
+        cursor: pointer;
+        .pipe {
+            width: 10px;
+            height: 100%;
+            /* background-color: black; */
+            border-left: 2px solid black;
+            border-bottom: 2px solid black;
+            border-radius: 2px;
+        }
+    }
+
+    .collapsed {
+        width: 100%;
+        padding-left: 20px;
+        color: black;
+        font-size: 20px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .actionlist {
+        flex: 1;
+    }
+}

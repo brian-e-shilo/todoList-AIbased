@@ -1,0 +1,66 @@
+@use "../styles/common.scss" as c;
+
+.action {
+    margin-top: 8px;
+    min-height: 40px;
+    background-color: c.$card;
+    border-radius: c.$small-corner;
+    width: 100%;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    textarea {
+        flex: 1;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0 16px;
+        resize: none;
+        color: white;
+    }
+
+    .config {
+        /* width: 80px; */
+        padding-right: 14px;
+        padding-left: 12px;
+        cursor: pointer;
+        height: 60%;
+        border-left: 2px solid c.$highlight;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+
+        .circle {
+            
+            @include c.center();
+            border-radius: 100%;
+            /* border: 1px solid white; */
+            width: 22px;
+            height: 22px;
+
+            .zap {
+                width: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+    
+            .delete {
+                color: black;
+                width: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            /* &:last-child {
+                margin-left: 4px;
+            } */
+        }
+    }
+
+}

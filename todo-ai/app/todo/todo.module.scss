@@ -1,0 +1,48 @@
+@use "../../styles/common.scss" as c;
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    min-height: 100vh;
+    color: white;
+
+    .welcome {
+        color: #7f5af0;
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 20px;
+
+    }
+    .todos {
+        display: flex;
+    }
+    .categories {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: min-content;
+        width: 35px;
+        /* height: 200px; */
+        background-color: white;
+        border-radius: c.$small-corner;
+        margin-right: 12px;
+
+        display: flex;
+        flex-direction: column;
+
+        .category {
+            cursor: pointer;
+            width: 35px;
+            height: 35px;
+            @include c.center;
+            color: c.$card;
+        }
+        .selected {
+            /* background-color: c.$card !important; */
+            color: c.$tertiary !important;
+        }
+    }
+
+}
